@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefenderDisabler", "DefenderDisabler.csproj", "{5CBB2B6E-F6EA-40D8-B841-6D0D6ADE543A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DefenderDisablerInstaller", "DefenderDisablerInstaller\DefenderDisablerInstaller.vdproj", "{4618C9D2-E70D-EB38-BB5D-5C446298D4F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CBB2B6E-F6EA-40D8-B841-6D0D6ADE543A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CBB2B6E-F6EA-40D8-B841-6D0D6ADE543A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CBB2B6E-F6EA-40D8-B841-6D0D6ADE543A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CBB2B6E-F6EA-40D8-B841-6D0D6ADE543A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4618C9D2-E70D-EB38-BB5D-5C446298D4F7}.Debug|Any CPU.ActiveCfg = Debug
+		{4618C9D2-E70D-EB38-BB5D-5C446298D4F7}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5350EABC-F66E-4B14-84AB-7529F43DE065}
+	EndGlobalSection
+EndGlobal

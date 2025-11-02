@@ -1,0 +1,41 @@
+# Build/Compilation directories
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*/[Dd]ebug/
+*/[Rr]elease/
+
+# Executables and other compiled outputs
+*.exe
+*.dll
+*.pdb
+*.obj
+*.ilk
+*.idb
+*.tlb
+*.tlh
+
+# Visual Studio user and solution files
+*.suo
+*.user
+*.userprefs
+*.vssscc
+*.vspscc
+.vs/
+*.dotSettings
+
+# Local NuGet packages directory
+packages/
+
+# NuGet package restore database
+.nuget/NuGetScratch
+
+# Specific output folders for the installer project
+DefenderDisablerInstaller/[Bb]in/
+DefenderDisablerInstaller/[Oo]bj/
+
+# Installer files
+*.msi
+*.cab
+*.setup.exe
