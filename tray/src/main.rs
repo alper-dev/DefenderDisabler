@@ -46,6 +46,7 @@ const NIF_ICON: u32 = 0x00000002;
 const NIF_MESSAGE: u32 = 0x00000001;
 const NIF_TIP: u32 = 0x00000004;
 const IDI_APPLICATION: LPCWSTR = 32512 as LPCWSTR;
+const IDI_ICON1: LPCWSTR = 1 as LPCWSTR;
 
 #[repr(C)]
 struct WNDCLASSEXW {
@@ -323,14 +324,16 @@ fn main() {
 
         let class_name = to_wide("DefenderDisablerTray\0");
 
+        let h_instance = GetModuleHandleW(ptr::null());
+
         let wc = WNDCLASSEXW {
             cbSize: std::mem::size_of::<WNDCLASSEXW>() as u32,
             style: 0,
             lpfnWndProc: Some(window_proc),
             cbClsExtra: 0,
             cbWndExtra: 0,
-            hInstance: GetModuleHandleW(ptr::null()),
-            hIcon: LoadIconW(ptr::null_mut(), IDI_APPLICATION),
+            hInstance: h_instance,
+            hIcon: LoadIconW(h_instance, IDI_ICON1),
             hCursor: ptr::null_mut(),
             hbrBackground: ptr::null_mut(),
             lpszMenuName: ptr::null(),
@@ -357,7 +360,7 @@ fn main() {
 
         // Set up tray icon
         TRAY_ICON.hWnd = hwnd;
-        TRAY_ICON.hIcon = LoadIconW(ptr::null_mut(), IDI_APPLICATION);
+        TRAY_ICON.hIcon = LoadIconW(h_instance, IDI_ICON1);
 
         let tip = to_wide("Defender Disabler\0");
         TRAY_ICON.szTip[..tip.len().min(127)].copy_from_slice(&tip[..tip.len().min(127)]);
